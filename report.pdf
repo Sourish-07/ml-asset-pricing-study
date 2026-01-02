@@ -1,0 +1,43 @@
+Title
+Empirical Evaluation of Short Horizon Equity Return Predictability Using Machine Learning
+
+Author
+Sourish Mudumby Venugopal
+
+Abstract
+This paper evaluates the predictability of daily U.S. equity returns using machine learning models applied to a 
+large scale panel of stock price data. Using lagged returns and volatility based features, 
+I assess whether nonlinear models provide meaningful improvements over linear benchmarks. 
+Results show limited out of sample predictability, consistent with existing asset pricing literature, 
+highlighting the challenges of short horizon return forecasting.
+
+Data
+The dataset consists of daily price observations for U.S. equities spanning multiple decades. 
+Raw price files were cleaned and aggregated into a unified panel containing over fourteen million observations. 
+Daily returns were computed at the individual stock level.
+
+Feature Construction
+For each stock, I constructed lagged daily returns at one, five, and twenty day horizons. 
+Rolling twenty day return volatility was also included to capture time varying risk. 
+Observations with insufficient history were removed to ensure consistent feature availability.
+
+Methodology
+I evaluated two models. A linear regression model was used as a baseline to assess linear predictability. 
+A random forest model was used to capture nonlinear relationships between lagged returns and volatility. 
+Models were evaluated using out of sample mean squared error and R squared.
+
+Results
+Both models produced negative out of sample R squared values. 
+The random forest reduced prediction error relative to the linear benchmark but did not achieve positive 
+explanatory power. These findings are consistent with prior research demonstrating the difficulty of 
+predicting short horizon stock returns.
+
+Discussion
+The results suggest that even flexible nonlinear models struggle to extract reliable signal from daily equity returns.
+This reinforces the importance of careful validation and skepticism toward apparent in sample performance. 
+The project emphasizes empirical discipline over performance optimization.
+
+Conclusion
+This study provides a transparent evaluation of machine learning methods applied to asset pricing data. 
+While predictive performance is limited, the results align with theoretical and empirical expectations and 
+demonstrate a scalable research pipeline suitable for further extensions.
